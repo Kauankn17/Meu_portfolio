@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
      Manter os dados em arrays facilita atualizar o site sem mexer no HTML.
      ---------------------------------------------------------------------- */
   const skills = [
-    { name: 'Java',              level: 50 },
+    { name: 'Java',              level: 40 },
     { name: 'Python',            level: 100 },
     { name: 'JavaScript',        level: 70 },
     { name: 'HTML / CSS',        level: 95 },
@@ -114,11 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const projects = [
     {
-      title: 'Nebula Dashboard',
-      desc:  'Painel analítico em tempo real com visualizações fluidas e tema escuro inspirado em astronomia.',
-      image: 'assets/project-1.jpg',
-      tech:  ['React', 'TypeScript', 'D3.js', 'Node'],
-      github: '#', demo: '#',
+      title: 'Jogo de ping pong simples',
+      desc:  'Um jogo de ping pong simples feito no ensino medio como um primeiro contato com as linguagens',
+      image: 'assets/pingPong.png',
+      tech:  ['Html', 'Css', 'JavaScript'],
+      github: '', 
+      demo: 'Jogo alinhado/jogo.html',
     },
     {
       title: 'Moodtape',
@@ -239,24 +240,47 @@ document.addEventListener('DOMContentLoaded', () => {
      7. FORMULÁRIO DE CONTATO
      Simula o envio com feedback visual (não envia para servidor).
      ---------------------------------------------------------------------- */
-  const form    = document.getElementById('contact-form');
-  const submit  = document.getElementById('submit-btn');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (!form.checkValidity()) return;
-    submit.innerHTML = '<span>Mensagem enviada ✓</span>';
-    setTimeout(() => {
-      submit.innerHTML = '<span>Enviar mensagem</span> <i class="bi bi-send"></i>';
-      form.reset();
-    }, 3000);
-  });
+  const form = document.getElementById('contact-form');
+const submit = document.getElementById('submit-btn');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  if (!form.checkValidity()) return;
+
+  const nome = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const assunto = document.getElementById('subject').value;
+  const mensagem = document.getElementById('message').value;
+
+  const corpo = encodeURIComponent(
+    `${mensagem}`
+  );
+
+  const gmailUrl =
+    `https://mail.google.com/mail/?view=cm&fs=1` +
+    `&to=kauanferrarekm7@gmail.com` +
+    `&su=${encodeURIComponent(assunto)}` +
+    `&body=${corpo}`;
+
+  window.open(gmailUrl, '_blank');
+
+  submit.innerHTML = '<span>Mensagem enviada ✓</span>';
+
+  setTimeout(() => {
+    submit.innerHTML =
+      '<span>Enviar mensagem</span> <i class="bi bi-send"></i>';
+
+    form.reset();
+  }, 3000);
+});
 
 
   /* ----------------------------------------------------------------------
      8. ANO ATUAL NO RODAPÉ
      ---------------------------------------------------------------------- */
   document.getElementById('footer-year').textContent =
-    `© ${new Date().getFullYear()} Kauan Victor — feito com café, código e Carpe.`;
+    `© ${new Date().getFullYear()} © Kauan Victor — feito com café, MUITO energético e código`;
 
 
   /* ----------------------------------------------------------------------
