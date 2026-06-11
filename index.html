@@ -87,28 +87,51 @@
        Pílula centralizada que encolhe ao rolar a página (classe .scrolled via JS)
        ========================================================================= -->
   <header id="navbar" class="nav-floating">
-    <nav class="nav-pill glass-strong">
-      <!-- Logo: letra K dentro de um disco com gradiente -->
-      <a href="#top" class="nav-logo">
-        <span class="logo-badge">
-          <span class="logo-glow"></span>
-          <span class="logo-letter">K</span>
-        </span>
-        <span class="logo-text text-gradient d-none d-sm-inline">kauan.dev</span>
-      </a>
+  <nav class="nav-pill glass-strong">
 
-      <!-- Links principais (escondidos em telas pequenas) -->
-      <ul class="nav-links d-none d-md-flex">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#trajetoria">Trajetória</a></li>
-        <li><a href="#contato">Contato</a></li>
+    <a href="#top" class="nav-logo">
+      <span class="logo-badge">
+        <span class="logo-glow"></span>
+        <span class="logo-letter">K</span>
+      </span>
+      <span class="logo-text text-gradient d-none d-sm-inline">kauan.dev</span>
+    </a>
+
+    <!-- Links principais: visíveis a partir de md (768px) -->
+    <ul class="nav-links d-none d-md-flex">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#trajetoria">Trajetória</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <a href="#contato" class="btn-gradient btn-sm-pill d-none d-md-inline-flex">Vamos falar</a>
+
+    <!-- Botão hambúrguer: só aparece abaixo de md -->
+    <button
+      class="hamburger-btn d-md-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mobile-menu"
+      aria-expanded="false"
+      aria-label="Abrir menu"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+  </nav>
+
+  <!-- Menu mobile: aparece abaixo da navbar ao clicar no hambúrguer -->
+    <div class="collapse" id="mobile-menu">
+      <ul class="mobile-nav-links glass-strong">
+        <li><a href="#sobre"      data-bs-toggle="collapse" data-bs-target="#mobile-menu">Sobre</a></li>
+        <li><a href="#skills"     data-bs-toggle="collapse" data-bs-target="#mobile-menu">Skills</a></li>
+        <li><a href="#projetos"   data-bs-toggle="collapse" data-bs-target="#mobile-menu">Projetos</a></li>
+        <li><a href="#trajetoria" data-bs-toggle="collapse" data-bs-target="#mobile-menu">Trajetória</a></li>
+        <li><a href="#contato"    data-bs-toggle="collapse" data-bs-target="#mobile-menu">Contato</a></li>
+        <li><a href="#contato"    class="btn-gradient w-100 text-center" data-bs-toggle="collapse" data-bs-target="#mobile-menu">Vamos falar</a></li>
       </ul>
-
-      <!-- CTA: leva direto para o formulário de contato -->
-      <a href="#contato" class="btn-gradient btn-sm-pill">Vamos falar</a>
-    </nav>
+    </div>
   </header>
 
 
@@ -348,10 +371,10 @@
           <div class="glass card-side mb-3">
             <div class="eyebrow-inline">Encontre-me em</div>
             <div class="row g-2 mt-2">
-              <div class="col-6"><a class="social-chip glow-hover" href="https://github.com/Kauankn17"><span class="icon-chip"><i class="bi bi-github"></i></span>GitHub</a></div>
-              <div class="col-6"><a class="social-chip glow-hover" href="https://www.linkedin.com/in/kauan-victor-pereira-euphrasio-ba6486323/"><span class="icon-chip"><i class="bi bi-linkedin"></i></span>LinkedIn</a></div>
-              <div class="col-6"><a class="social-chip glow-hover" href="https://mail.google.com/mail/?view=cm&fs=1&to=kauanferrarekm7@gmail.com"><span class="icon-chip"><i class="bi bi-envelope"></i></span>Email</a></div>
-              <div class="col-6"><a class="social-chip glow-hover" href="https://www.instagram.com/kauankn07/"><span class="icon-chip"><i class="bi bi-instagram"></i></span>Instagram</a></div>
+              <div class="col-6"><a class="social-chip glow-hover" href="https://github.com/Kauankn17" target="_blank" rel="noopener"><span class="icon-chip"><i class="bi bi-github"></i></span>GitHub</a></div>
+              <div class="col-6"><a class="social-chip glow-hover" href="https://www.linkedin.com/in/kauan-victor-pereira-euphrasio-ba6486323/" target="_blank" rel="noopener"><span class="icon-chip"><i class="bi bi-linkedin"></i></span>LinkedIn</a></div>
+              <div class="col-6"><a class="social-chip glow-hover" href="https://mail.google.com/mail/?view=cm&fs=1&to=kauanferrarekm7@gmail.com" target="_blank" rel="noopener"><span class="icon-chip"><i class="bi bi-envelope"></i></span>Email</a></div>
+              <div class="col-6"><a class="social-chip glow-hover" href="https://wa.me/5544991294045" target="_blank" rel="noopener"><span class="icon-chip"><i class="bi bi-whatsapp"></i></span>WhatsApp</a></div>
             </div>
           </div>
 

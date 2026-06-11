@@ -19,6 +19,7 @@
     15. Footer
     16. Music player
     17. Responsividade
+    18. Menu hambúrguer (mobile)
    ============================================================================= */
 
 /* ---------- 1. TOKENS DE DESIGN ----------------------------------------- */
@@ -445,4 +446,42 @@ p  { margin: 0 0 0.6rem; }
   .nav-floating { top: .6rem; }
   .nav-pill { padding: .45rem .8rem; }
   .nav-logo .logo-text { display: none; }
+}
+
+/* ---------- 18. MENU MOBILE (hambúrguer) ------------------------------------ */
+.hamburger-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+.hamburger-btn:hover { border-color: var(--primary); }
+
+.mobile-nav-links {
+  list-style: none;
+  margin: .4rem .8rem 0;
+  padding: .6rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.mobile-nav-links li a {
+  display: block;
+  padding: .65rem 1rem;
+  border-radius: 12px;
+  font-size: .95rem;
+  font-weight: 500;
+  transition: background .2s, color .2s;
+}
+.mobile-nav-links li a:hover {
+  background: oklch(0.25 0.06 280 / 0.6);
+  color: var(--primary-glow);
 }
