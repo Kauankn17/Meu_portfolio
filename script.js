@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Banco de Dados',    level: 80 },
     { name: 'Git / GitHub',      level: 60 },
     { name: 'UI / UX',           level: 65 },
-    { name: 'APIs ;-;',              level: 0 },
+    { name: 'APIs',              level: 10 },
     { name: 'Desenvolvimento Web', level: 67 },
   ];
 
