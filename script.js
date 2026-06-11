@@ -336,4 +336,12 @@ form.addEventListener('submit', (e) => {
       : '<i class="bi bi-volume-up"></i>';
   });
 });
+// fecha o menu mobile ao clicar em qualquer link dele
+const mobileMenu = document.getElementById('mobile-menu');
+const bsCollapse = new bootstrap.Collapse(mobileMenu, { toggle: false });
 
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    bsCollapse.hide();
+  });
+});
